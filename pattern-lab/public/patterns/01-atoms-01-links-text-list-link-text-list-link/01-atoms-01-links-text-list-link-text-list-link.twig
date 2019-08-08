@@ -1,0 +1,7 @@
+{% set inline_base_class = 'text-list-link' %}
+
+{% include "@atoms/01-links/link/link.twig" with {
+  "link_content": text_list_link,
+  "link_url": text_list_link_url,
+  "link_base_class": inline_base_class|default('link'),
+} %}

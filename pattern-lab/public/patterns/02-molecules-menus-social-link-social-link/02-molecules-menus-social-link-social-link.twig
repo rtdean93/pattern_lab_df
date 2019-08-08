@@ -1,0 +1,22 @@
+{% set link_base_class = link_base_class|default('social-link') %}
+ {% set social_icon = social_link.content['#menu_link_content'].field_social_icon_path.value %}
+   
+    <a
+    {{ bem(link_base_class, (link_modifiers), link_blockname) }}
+    {% for attribute,value in link_attributes %}
+        {{ attribute }}="{{ value }}"
+    {% endfor %}
+    href="{{ social_link.url }}"
+    >
+        {% include "@atoms/04-images/00-image/_image.twig" with {
+            img_src: social_icon,
+            img_alt: social_link.img_alt,
+        } %}
+
+ {% include "@atoms/01-links/link/link.twig" with {
+    'link_url': social_link.url,
+    'link_content' : social_link.title,
+    'link_base_class': 'footer-link',
+} %}
+
+    </a>

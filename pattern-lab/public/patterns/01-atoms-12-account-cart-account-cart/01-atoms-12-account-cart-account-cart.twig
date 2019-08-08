@@ -1,0 +1,10 @@
+{% set cart_icon = cart_icon|default('/themes/custom/delta_theme/images/icons/src/cart.svg') %}
+{% include "@atoms/04-images/00-image/figure.twig" with {
+   'img_alt': alt,
+   'img_url': url,
+   'image_figure_base_class':icon.class,
+} %}
+
+{% if cart_count_value %}
+  <span class="cart_count">{{cart_count_value}}</span>
+{% endif %}

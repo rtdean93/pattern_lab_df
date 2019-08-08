@@ -1,0 +1,25 @@
+{% block header_content %}
+    <div class="main-nav-block header-container">
+
+    <div id="toggle-expand-mobile" class="toggle-expand">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <div class="right-header">
+      {% include "@molecules/menus/mega-menu/mega-menu.twig" %}
+      {% include "@molecules/search-block/search-block.twig" %}
+    </div>
+      <div class="mobile-header-icons">
+        <div class="mobile-serach-icon-block" id="mobile-serach-icon-block">
+          {% include "@atoms/04-images/00-image/figure.twig" with {
+            img_src: '/themes/custom/delta_theme/images/icons/src/search.png',
+            img_alt: 'Search Icon',
+            image_figure_base_class: 'mobile-search-icon',
+            image_link_blockname: 'mobile-search-icon',
+          } %}
+        </div>
+      </div>
+  </div>
+{% endblock %}

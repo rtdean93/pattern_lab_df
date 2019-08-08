@@ -1,0 +1,7 @@
+{% set animation_base_class = 'animation-link' %}
+
+{% include "@atoms/01-links/link/link.twig" with {
+  "link_content": animation_link_text,
+  "link_url": animation_link_url,
+  "link_base_class": animation_base_class|default('link'),
+} %}

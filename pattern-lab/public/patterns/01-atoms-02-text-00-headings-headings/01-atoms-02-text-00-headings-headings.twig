@@ -1,0 +1,20 @@
+{% set heading_base_class = heading_base_class|default('h' ~ heading_level) %}
+
+<h1 class="sg-pattern-header">Header light</h1>
+  {% for i in 1..6 %}
+    <div class="sg-pattern pl-heading-examples">
+      <h3 class="sg-pattern-title">h{{ i }}</h3>
+      <h{{ i }} class="h{{ i }}">This is a Header {{ i }} example</h{{ i }}>
+    </div>
+  {% endfor %}
+
+  <div class="sg-pattern pl-heading-examples">
+      <h3 class="sg-pattern-title">h{{ heading_level }}</h3>
+      <h{{heading_level}} {{ bem(heading_base_class, (heading_modifiers), heading_blockname) }}>This is a Header {{ i }} example</h{{ i }}>
+  </div>
+  
+
+</div>
+{% if meta %}
+  <p> <small>{{ meta.description }}</small> </p>
+{% endif %}

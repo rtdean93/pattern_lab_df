@@ -1,0 +1,16 @@
+
+<div class="dropdown">
+  <div class="dropdown-content">
+  <ul>
+    {% for dropdown_list in dropdown_lists %}
+      <li>
+       {% include "@atoms/01-links/link/link.twig" with {
+        'link_url':dropdown_list.url,
+        'link_content' : dropdown_list.content,
+        'link_base_class': dropdown_list.class,
+        } %}
+      </li>
+    {% endfor %}
+  </ul>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<footer class="footer">
+
+  {% include "@molecules/disclaimer/disclaimer.twig" %}
+
+  <div class="footer__wrapper">
+    <ul>
+    <li><h4>{{footer_column_one.title}}</h4></li>
+    {% for key,footer_nav in footer_column_one %}
+    {% if key != 'title'  %}
+      <li>
+        {% include "@molecules/menus/footer-link-list/footer-link-list.twig" with {
+          'footer_link': footer_nav,
+        } %}
+      </li>
+      {%endif%}
+    {% endfor %}
+    </ul>
+
+    <ul>
+    <li><h4>{{footer_column_two.title}}</h4></li>
+    {% for key,footer_nav in footer_column_two %}
+    {% if key != 'title'  %}
+      <li>
+        {% include "@molecules/menus/footer-link-list/footer-link-list.twig" with {
+          'footer_link': footer_nav,
+        } %}
+      </li>
+    {%endif%}
+    {% endfor %}
+    </ul>
+
+    <ul>
+    <li><h4>{{footer_column_three.title}}</h4></li>
+    {% for key,footer_nav in footer_column_three %}
+    {% if key != 'title'  %}
+      <li>
+        {% include "@molecules/menus/footer-link-list/footer-link-list.twig" with {
+          'footer_link': footer_nav,
+        } %}
+      </li>
+    {%endif%}
+    {% endfor %}
+    </ul>
+    <ul>
+    <li><h4>{{footer_column_four.title}}</h4></li>
+    {% for key,footer_nav in footer_column_four %}
+    {% if key != 'title'  %}
+      <li>
+        {% include "@molecules/menus/footer-link-list/footer-link-list.twig" with {
+          'footer_link': footer_nav,
+        } %}
+      </li>
+    {%endif%}
+    {% endfor %}
+    </ul>
+    <ul>
+    <li><h4>{{footer_column_five.title}}</h4></li>
+    {% for key,footer_nav in footer_column_five %}
+    {% if key != 'title'  %}
+      <li>
+        {% include "@molecules/menus/footer-link-list/footer-link-list.twig" with {
+          'footer_link': footer_nav,
+        } %}
+      </li>
+    {%endif%}
+    {% endfor %}
+    </ul>
+    <ul>
+    <li><h4>{{footer_column_six.title}}</h4></li>
+    {% for key,footer_nav in footer_column_six %}
+    {% if key != 'title'  %}
+      <li>
+        {% include "@molecules/menus/social-link/social-link.twig" with {
+          'social_link': footer_nav,
+        } %}
+      </li>
+    {%endif%}
+    {% endfor %}
+    </ul>
+  </div>
+
+  {% include "@molecules/menus/footer-slim/footer-slim.twig" %}
+
+</footer>
